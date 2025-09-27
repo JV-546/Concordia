@@ -32,7 +32,7 @@ def p3():
 def p4():
     nested_list = [ 1, 2, [ 3, 4, 'hello' ]]
     nested_list[2][2] = "goodbye"
-    print(f"{nested_list}")
+    print(f"{nested_list}") 
 
 #_________________problem 5_______________________________
 
