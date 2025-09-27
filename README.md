@@ -1,2 +1,2 @@
 # Concordia
-Assignment for python course at Concordia
+Assignments for python course at Concordia
