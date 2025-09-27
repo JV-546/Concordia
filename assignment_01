@@ -1,0 +1,111 @@
+
+#////////////////// ASSIGNMENT 01 \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#_________________problem 1_______________________________
+def p1():
+    result =  (((10)**2)*2) - 100 + 3/4  
+    print(f"{result}")
+
+#_________________problem 2_______________________________
+
+def p2():
+    while(len(word)<2):
+        word = input("Enter a string to be sliced: ")
+    print(f"{slice(word)}")
+
+# function to remove first and last character of a string    
+def slice(w):
+    return w[1:len(w)-1]
+
+#_________________problem 3_______________________________
+
+def p3():
+    a = (input("Enter integers for list (a) seperated by commas: ").replace(" ","")).split(",")
+    b = (input("Enter integers for list (b) seperated by commas: ").replace(" ","")).split(",")
+    c = []
+    c.append(a[len(a)- 2])
+    c.append( b[len(b)- 2]) 
+    print(f"{c}")
+
+#_________________problem 4_______________________________
+
+def p4():
+    nested_list = [ 1, 2, [ 3, 4, 'hello' ]]
+    nested_list[2][2] = "goodbye"
+    print(f"{nested_list}")
+
+#_________________problem 5_______________________________
+
+def p5():
+    
+    # my_list = [ 1, 2, 2, 33, 4, 411, 22, 3, 3, 2] 
+    
+    my_list = (input("Enter a list of integers seperated by commas: ").replace(" ","")).split(",")
+    new_list = []
+    for number in my_list:
+        if my_list.count(number) > 1:
+            continue
+        elif my_list.count(number) == 1:
+            new_list.append(number)
+        
+    print(f"{new_list}")
+
+#_________________problem 6_______________________________
+
+def p6():
+    file_name = "test.txt"
+    with open(file_name, "w") as f:
+        f.write(input("Enter a string: ")) 
+        
+    with open(file_name, "r") as f:
+        print(f"{f.read()}")
+   
+#_________________problem 7_______________________________
+def p7():
+    l_one = [ 1, 2, [ 3, 4 ] ]
+    l_two = [ 1, 2, { 'k1' : 4 } ]
+    l_one[2][0] >= l_two[2]['k1']
+    print(f"3 >= 4 is {bool(l_one[2][0] >= l_two[2]['k1'])}")
+   
+#_________________problem 8_______________________________
+
+def p8():
+    d = { 'k1' : [ { 'nest_key' : [ 'this is deep' , [ 'hello' ] ] } ]} 
+    print(f"{get_val(d)}") 
+
+# Get value in a nested dictionary
+def get_val(value):
+    return (f"{ value['k1'][0]['nest_key'][1] }") 
+
+#//////////////////////////////////////////////////////////////////////////////
+
+def main():
+
+    # ///// remove comments to run specific problems \\\\
+
+    #problem 1 [DONE]
+    p1()
+    
+    #problem 2 [DONE]
+    #p2()  
+      
+    #problem 3 [DONE]
+    #p3()
+            
+    #problem 4 [DONE]
+    #p4()
+     
+    #problem 5 [DONE]
+    #p5()
+  
+    #problem 6 [DONE]
+    #p6()
+
+    #problem 7 [DONE]
+    #p7()
+
+    #problem 8 [DONE]
+    #p8()
+
+if __name__ == "__main__":
+    main()
