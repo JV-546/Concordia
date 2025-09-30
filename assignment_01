@@ -40,6 +40,7 @@ def p4():
 def p5():
     
     # my_list = [ 1, 2, 2, 33, 4, 411, 22, 3, 3, 2] 
+    # easier: new_list = set(my_list) *this will return unique elements in the list as a set
     
     my_list = (input("Enter a list of integers seperated by commas: ").replace(" ","")).split(",")
     new_list = []
