@@ -31,6 +31,7 @@ def p3():
 
 def p4():
     nested_list = [ 1, 2, [ 3, 4, 'hello' ]]
+    print(f"{nested_list}") 
     nested_list[2][2] = "goodbye"
     print(f"{nested_list}") 
 
@@ -55,7 +56,9 @@ def p5():
 def p6():
     file_name = "test.txt"
     with open(file_name, "w") as f:
-        f.write(input("Enter a string: ")) 
+        user_input = input("Enter a string of characters: ")
+        lenght = len(user_input)
+        f.write(f"Character count: {str(lenght)}") 
         
     with open(file_name, "r") as f:
         print(f"{f.read()}")
@@ -65,7 +68,8 @@ def p7():
     l_one = [ 1, 2, [ 3, 4 ] ]
     l_two = [ 1, 2, { 'k1' : 4 } ]
     l_one[2][0] >= l_two[2]['k1']
-    print(f"3 >= 4 is {bool(l_one[2][0] >= l_two[2]['k1'])}")
+    print("Since the value of 1_one[2][0] = 3 and the value of 1_two[2]['k1'] = 4 \nThe answer is False b/c 3 >= 4" )
+    print(f"Verified answer by casting the expression to a boolean: {bool(l_one[2][0] >= l_two[2]['k1'])}")
    
 #_________________problem 8_______________________________
 
@@ -84,7 +88,7 @@ def main():
     # ///// remove comments to run specific problems \\\\
 
     #problem 1 [DONE]
-    p1()
+    #p1()
     
     #problem 2 [DONE]
     #p2()  
@@ -93,7 +97,7 @@ def main():
     #p3()
             
     #problem 4 [DONE]
-    #p4()
+    p4()
      
     #problem 5 [DONE]
     #p5()
