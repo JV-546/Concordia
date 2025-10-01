@@ -54,7 +54,9 @@ def p5():
 
 #_________________problem 6_______________________________
 
+
 def p6():
+    # test.txt will be overwirtten everytime the program is run
     file_name = "test.txt"
     with open(file_name, "w") as f:
         user_input = input("Enter a string of characters: ")
