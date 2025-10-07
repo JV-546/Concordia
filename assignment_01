@@ -87,7 +87,7 @@ def main():
     # ///// remove comments to run specific problems \\\\
 
     #problem 1 [DONE]
-    #p1()
+    p1()
     
     #problem 2 [DONE]
     #p2()  
@@ -108,7 +108,7 @@ def main():
     #p7()
 
     #problem 8 [DONE]
-    p8()
+    #p8()
 
 if __name__ == "__main__":
     main()
