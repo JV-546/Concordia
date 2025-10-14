@@ -88,10 +88,10 @@ def main():
     # ///// remove comments to run specific problems \\\\
 
     #problem 1 [DONE]
-    #p1()
+    p1()
     
     #problem 2 [DONE]
-    p2()  
+    #p2()  
       
     #problem 3 [DONE]
     #p3()
