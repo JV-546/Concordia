@@ -16,7 +16,7 @@ def p2():
 
 # function to remove first and last character of a string    
 def slice(w):
-    return w[1:len(w)-1] 
+F    return w[1:len(w)-1] 
 
 #_________________problem 3_______________________________
 
