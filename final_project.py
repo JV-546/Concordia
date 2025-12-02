@@ -1,6 +1,6 @@
 #////////////////// FINAL PROJECT \\\\\\\\\\\\\\\\\\\\\\\\\\\
 import random
-from termcolor import colored,cprint
+from termcolor import colored, cprint
 size = 3
 def make_board(size):
     # create board using list of size (n x n)
@@ -115,10 +115,42 @@ def check_win(board):
                 break
         if match:
             return True
+        
+#///// check Diagonal  win conditions \\\\\
+
+    # check first diagonals from board[0][0] to board[size][size]
+    
+    for i in range(size):
+        first = board[0][0]
+        if first == " ":
+            continue
+
+        match = True
+        for i in range(size):
+            if board[i][i] != first:
+                match = False
+                break
+        if match:
+            return True
+    
+    # check second diagonals from board[size-1][0]  to board[1][size]
+     
+    for j in range(size):
+        first = board[size-1][0]
+        if first == " ":
+            continue
+
+        match = True
+        for j in range(size):
+            if board[size-1-j][j] != first:
+                match = False
+                break
+        if match:
+            return True
+
+    
     # if no one has won yet
     return False
-
-
 
 
 def game(mode):
